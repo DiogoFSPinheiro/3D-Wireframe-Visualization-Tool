@@ -1,8 +1,8 @@
-# Step by Step Guide of the FDF Project
+# Step by Step Guide of the Project
 
 ![image](https://github.com/DiogoFSPinheiro/42_Rank_02/assets/143399294/839dd643-01af-4d3f-9932-5dd45bbbf794)
 
-The FDF project, short for "Fil de Fer," is a 42School project aimed at introducing students to graphical programming. The objective is to create a simple wireframe model viewer that reads data from a file and displays a 3D representation of the data.
+This project is aimed at introducing myself to graphical programming. The objective is to create a simple wireframe model viewer that reads data from a file and displays a 3D representation of the data.
 
 **Objectives of the Project**
 
@@ -248,7 +248,7 @@ To draw we need to learn some new concepts:
 * `Isometric View Transformation:` This transformation is used to project 3D points onto a 2D plane in a way that preserves relative distances along the x, y, and z axes.
 * `Rendering and Display:` Utilizing libraries like MiniLibX to create windows, handle events (such as key presses), and continuously redraw the scene (using functions like mlx_loop and mlx_put_image_to_window) to provide an interactive graphical interface.
 
-### 1. Bresenham's Algorithm
+### 1. DDA's Algorithm
 The algo Works like this:
 
   [1] Determine the initial coordinates (x1, y1) and (x2, y2) of the line;
@@ -264,7 +264,7 @@ The algo Works like this:
   [4] Increment the step to the x1 and y1 repetebly until you reach the x2 or y2
   
 ```sd
-void	ft_bresenhams_alg(t_mlx *win, t_point p1, t_point p2)
+void	ft_dda_alg(t_mlx *win, t_point p1, t_point p2)
 {
 	float	x_step;
 	float	y_step;
@@ -400,7 +400,6 @@ mlx_hook(win->mlx_win, 17, 0, ft_close, win)
 Also, I didn't go through it in detail, but don't forget that you need to ensure the program only reads .fdf files and that you have the necessary permissions to open the file!
 # Time to make all kind of bonus!
 
-Finally, we arrive at the end! Now, you can add all the bonuses you want. I won't explain any more so you can let your imagination run wild! Okay, just a little tip... You can change the color by multiplying a color factor with the original color. Just do color *= 1.45 and it applies a shade of red! Have FUN! 🎨
 
 # Conclusion
 I hope I managed to help you in this project! By following this guide i hope you learned how to:

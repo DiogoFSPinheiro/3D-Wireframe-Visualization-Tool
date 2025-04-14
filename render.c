@@ -42,9 +42,9 @@ void	set_zoom(t_mlx *win, t_point *p1, t_point *p2)
 /*
 * So, lets do some math!
 * There are many algs to draw a line. 
-* I went with the bresenhams alg
+* I went with the dda alg
 */
-void	ft_bresenhams_alg(t_mlx *win, t_point p1, t_point p2)
+void	ft_dda_alg(t_mlx *win, t_point p1, t_point p2)
 {
 	float	x_step;
 	float	y_step;
@@ -104,11 +104,11 @@ int	draw(t_mlx *win)
 		{
 			// Draw horizontal lines between adjacent points in the same row
 			if (x < win->map->width - 1)
-				ft_bresenhams_alg(win, win->map->coord[y][x],
+				ft_dda_alg(win, win->map->coord[y][x],
 					win->map->coord[y][x + 1]);
 			 // Draw vertical lines between adjacent points in the same column
 			if (y < win->map->height - 1)
-				ft_bresenhams_alg(win, win->map->coord[y][x],
+				ft_dda_alg(win, win->map->coord[y][x],
 					win->map->coord[y + 1][x]);
 			x++;
 		}

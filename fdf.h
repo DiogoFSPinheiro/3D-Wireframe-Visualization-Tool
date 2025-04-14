@@ -75,7 +75,7 @@ void	ft_error_clean(int fd, char *str);
 //---------Math----------------
 int		ft_mod(int n);
 int		ft_max(int n1, int n2);
-void	ft_bresenhams_alg(t_mlx *win, t_point p1, t_point p2);
+void	ft_dda_alg(t_mlx *win, t_point p1, t_point p2);
 //---------Events--------------
 int		arrow_keys(int Key, t_mlx *mlx);
 int		ft_event_checker(int Key, t_mlx *mlx);
